@@ -15,9 +15,6 @@ env/
 .env
 .venv
 
-# Banco de dados local
-*.db
-*.sqlite3
 
 # IDEs
 .vscode/
