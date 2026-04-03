@@ -1,0 +1,13 @@
+# API
+fastapi
+uvicorn
+
+# Database
+sqlalchemy
+
+# Utils
+python-dotenv
+pydantic
+
+# ETL — coleta Portal da Transparencia
+requests

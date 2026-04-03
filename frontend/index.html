@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de Transparência e Risco Contratual (MTR-Saúde) v1.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/theme.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>
+                Monitor de Transparência e Risco Contratual (MTR-Saúde) <span style="font-weight:400;font-size:0.78rem;opacity:0.5;margin-left:0.1rem;">v1.0</span>
+            </h1>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                    <li><a href="pages/sobre.html">Sobre</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" title="Alternar tema">&#9790;</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Cards resumo -->
+        <div class="cards">
+            <div class="card card-white">
+                <h3>Total de Contratos</h3>
+                <p id="total-contratos">-</p>
+            </div>
+            <div class="card card-accent">
+                <h3>Score Médio</h3>
+                <p id="score-medio">0.00</p>
+            </div>
+            <div class="card card-danger">
+                <h3>Alto Risco</h3>
+                <p id="alto-risco">0</p>
+            </div>
+            <div class="card card-warning">
+                <h3>Médio Risco</h3>
+                <p id="medio-risco">0</p>
+            </div>
+            <div class="card card-success">
+                <h3>Baixo Risco</h3>
+                <p id="baixo-risco">0</p>
+            </div>
+        </div>
+
+        <!-- Filtros -->
+        <section class="section-box">
+            <h2>Filtros</h2>
+            <div class="filtros-container">
+                <input type="number" id="filtro-valor-min" placeholder="Valor minimo (R$)">
+                <input type="number" id="filtro-valor-max" placeholder="Valor maximo (R$)">
+                <select id="filtro-ordem">
+                    <option value="desc">Mais recente primeiro</option>
+                    <option value="asc">Mais antigo primeiro</option>
+                </select>
+                <button class="btn btn-primary btn-small" id="btn-filtrar">Filtrar</button>
+            </div>
+        </section>
+
+        <!-- Tabela -->
+        <section class="section-box">
+            <h2>Contratos</h2>
+            <div class="loading" id="loading">
+                <span class="spinner"></span> Carregando...
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Orgao</th>
+                            <th>Fornecedor</th>
+                            <th>Objeto</th>
+                            <th>Valor (R$)</th>
+                            <th>Inicio</th>
+                            <th>Fim</th>
+                            <th>Acoes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contratos-body"></tbody>
+                </table>
+            </div>
+            <div id="paginacao" class="paginacao"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Monitor de Transparência e Risco Contratual (MTR-Saúde) v1.0 - Engenharia de Software | Ministerio da Saude</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

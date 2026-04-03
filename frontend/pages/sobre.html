@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Projeto - Monitor de Transparência e Risco Contratual (MTR-Saúde) v1.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/theme.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>
+                Monitor de Transparência e Risco Contratual (MTR-Saúde) <span style="font-weight:400;font-size:0.78rem;opacity:0.5;margin-left:0.1rem;">v1.0</span>
+            </h1>
+            <div class="nav-right">
+                <ul>
+                    <li><a href="../index.html">Dashboard</a></li>
+                    <li><a href="sobre.html" class="active">Sobre</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" title="Alternar tema">&#9790;</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-box">
+            <h2>Sobre o Projeto</h2>
+            <div class="sobre-content">
+                <p>
+                    O <strong>Monitor de Transparência e Risco Contratual (MTR-Saúde) v1.0</strong>
+                    é um projeto de TCC do curso de Engenharia de Software focado na auditoria contínua, visualização e análise de risco preventivo em contratos públicos do
+                    <strong>Ministério da Saúde</strong> e órgãos vinculados.
+                </p>
+                <p>
+                    Mais do que apenas exibir dados do Portal da Transparência, o sistema evoluiu com ferramentas ativas antifraude. Foram integradas <strong>análises automatizadas de suspeitas</strong> que classificam contratos e fornecem um painel com um "Score Médio" de risco. 
+                </p>
+                <p>
+                    Adicionalmente, a plataforma agora conta com <strong>validação inteligente de fornecedores em tempo real (via BrasilAPI)</strong>, cruzando os dados contratuais com a base da Receita Federal para sinalizar automaticamente empresas inativas, recém-criadas ou com capital social incompatível.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-box">
+            <h2>Arquitetura</h2>
+            <div style="margin-top:0.5rem;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Camada</th>
+                            <th>Tecnologia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Front-end</td><td>HTML, CSS, JavaScript (Vanilla)</td></tr>
+                        <tr><td>Back-end / Machine Learning</td><td>Python (FastAPI, Pipeline de Anomalias)</td></tr>
+                        <tr><td>Banco de Dados</td><td>SQLite</td></tr>
+                        <tr><td>Integrações Externas (APIs)</td><td>Portal da Transparência API, BrasilAPI (Receita)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section-box">
+            <h2>Escopo de Dados</h2>
+            <div class="sobre-content">
+                <p>
+                    O sistema exibe contratos publicos do <strong>Ministerio da Saude</strong> e seus
+                    orgaos vinculados, coletados via API do Portal da Transparencia:
+                </p>
+                <ul class="diferenciais-list" style="margin-top:0.5rem;">
+                    <li><strong>MS</strong> - Ministerio da Saude</li>
+                    <li><strong>FIOCRUZ</strong> - Fundacao Oswaldo Cruz</li>
+                    <li><strong>ANVISA</strong> - Agencia Nacional de Vigilancia Sanitaria</li>
+                    <li><strong>ANS</strong> - Agencia Nacional de Saude Suplementar</li>
+                    <li><strong>FUNASA</strong> - Fundacao Nacional de Saude</li>
+                </ul>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Monitor de Transparência e Risco Contratual (MTR-Saúde) v1.0 - Engenharia de Software | Ministerio da Saude</p>
+    </footer>
+</body>
+</html>
